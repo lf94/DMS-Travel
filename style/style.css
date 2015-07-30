@@ -1,64 +1,55 @@
 .banner {
-    background-color: black;
-    text-align: center;
-}
-.banner h1 {
+  background-color: black;
+  text-align: center; }
+  .banner h1 {
     color: white;
     display: inline-block;
-    width: 100%;
-}
-.banner button {
+    width: 100%; }
+  .banner button {
     float: right;
     margin-right: 20px;
-    margin-top: 10px;
-}
+    margin-top: 10px; }
 
 main {
-    width: 640px;
-    margin: auto;
-}
+  width: 640px;
+  margin: auto; }
 
 .search-form {
-    text-align: right;
-    margin: 10px 0;
-}
+  text-align: right;
+  margin: 10px 0; }
 
 .grid {
-}
-.grid .row {
-    width: 100%;
-}
-.grid .row .column-1-3 {
-    width: 213.33333px;
-    display: inline-block;
-    float: left;
-}
-.grid:after {
+  /*Required because any floating elements are considered to have zero height.
+     This is called a "clearfix". http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
+     I could have put "clear: both" on the next element (<footer>), but that is not a very robust solution.
+  */ }
+  .grid .row {
+    width: 100%; }
+    .grid .row .column-1-3 {
+      width: 213.33333px;
+      display: inline-block;
+      float: left; }
+  .grid:after {
     display: table;
     clear: both;
-    content: "";
-}
+    content: ""; }
 
 .image {
-    border: 1px solid black;
-    padding: 5px;
-    margin: 3px;
-}
-.image img {
-    width: 100%;
-}
-.image .caption {
-    text-align: center;
-}
+  border: 1px solid black;
+  padding: 5px;
+  margin: 3px;
+  height: 170px; }
+  .image img {
+    width: 100%; }
+  .image .caption {
+    text-align: center; }
 
 footer {
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding-top: 20px;
-}
-footer .name {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px; }
+  footer .name {
     color: white;
-    text-align: left;
-}
+    text-align: left; }
