@@ -17,6 +17,9 @@ main {
 .search-form {
   text-align: right;
   margin: 10px 0; }
+  .search-form form {
+    position: relative;
+    left: 30px; }
 
 .grid {
   /*Required because any floating elements are considered to have zero height.
@@ -41,7 +44,7 @@ main {
   height: 170px; }
   .image img {
     width: 100%; }
-  .image .caption {
+  .image figcaption {
     text-align: center; }
 
 footer {

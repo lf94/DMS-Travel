@@ -26,6 +26,10 @@ main {
 .search-form {
     text-align: right;
     margin: 10px 0;
+    form {
+	position: relative;
+	left: 30px;
+    }
 }
 
 .grid {
@@ -58,7 +62,7 @@ main {
     img {
     	width: 100%;
     }
-    .caption { text-align: center; }
+    figcaption { text-align: center; }
 }
 
 footer {
