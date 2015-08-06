@@ -21,6 +21,9 @@ main {
     position: relative;
     left: 30px; }
 
+.even .column-1-3:nth-child(even) {
+  background-color: black; }
+
 .grid {
   /*Required because any floating elements are considered to have zero height.
      This is called a "clearfix". http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
