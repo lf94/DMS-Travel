@@ -10,26 +10,25 @@ searchForm.addEventListener("submit",function(event) {
     var searchField = document.getElementById("search-field");
     (function() {
 	var i;
-	var replacements = searchField.value;
+	var query = searchField.value;
 	var grid = document.querySelector(".grid .row");
-	var newPhotos;
+	var filteredPhotos;
 
-	if(replacements == "") {
+	if(query == "") {
 	    grid.innerHTML = generateImageThumbnailCell(originalPhotos);
 	    grid.className = "row"
 	    return;
 	}
-	
-	if(/[0-9]+/.test(replacements) == false) {
-	    alert("Please enter an integer.");
-	    return;
+
+	filteredPhotos = originalPhotos.filter(function(element) {
+	    return (new RegExp(query.trim(), "i")).test(element.alt);
+	});
+
+	if(filteredPhotos.length > 0) {
+	    grid.innerHTML = generateImageThumbnailCell(filteredPhotos);
+	} else {
+	    grid.innerHTML = "No results.";
 	}
-
-	grid.className = "row even"
-	replacements = parseInt(replacements);
-
-	newPhotos = (new Array(replacements)).fill(originalPhotos[0]);
-	grid.innerHTML = generateImageThumbnailCell(newPhotos);
 	
     })();
     
