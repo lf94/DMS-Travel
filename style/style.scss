@@ -21,6 +21,7 @@ $content-width: 640px;
 main {
     width: $content-width;
     margin: auto;
+    display: none;
 }
 
 .search-form {
