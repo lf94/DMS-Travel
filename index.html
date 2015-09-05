@@ -1,41 +1,217 @@
-<!doctype html>
+<!-- index.html -->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Week 5</title>
-		<link rel="stylesheet" type="text/css" href="style/style.css" />
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	</head>
-  <body>
-    <header class="banner">
-	    <h1>My Photo Album<button id="login-button">Login</button></h1>
-	    
-    </header>
-    
-    <div id="splash">
-      <p>
-	WOW AMAZING SPLASH SCREEN
-      </p>
-      <button id="splash-transition-button">CLICK THIS TO SEE A COOL PHOTO SITE</button>
-    </div>
-    
-    <main>
-      <button id="splash-transition-back-button">Back to splash screen</button>
-      </br>
-	    <div class="search-form">
-		    <form action="#" id="search-form" >
-			    <input type="text" name="keyword" value="" id="search-field" />
-			    <input type="submit" value="Search" />
-		    </form>
-	    </div>
-	    <div class="grid" >
-		    <div class="row" >
-		    </div>
-	    </div>
-    </main>
-    <footer>
-	    <div class="name" >By Lee Fallat</div>
-    </footer>
+				<head>
+								<meta charset="UTF-8" />
+								<title>Welcome to Australia</title>
+								<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+								<link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css" />
+								<link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap-theme.css" />
+								<link rel="stylesheet" href="./style/style.css" />
+								<!--
+								<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js""></script>
+								<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js""></script>
+								-->
+								<script src="./vendors/jquery/jquery-2.1.4.js"></script>
+								<script src="./vendors/bootstrap/js/bootstrap.js"></script>
+				</head>
+				<body>
+								<div id="splash-screen" style="display: none;">
+												<!-- nothing for this lab exercise -->
+								</div>
 
-    <script type="text/javascript" src="js/search.js"></script>
-  </body>
+								<div id="content-screen">
+
+												<header>
+																<img class="logo" src="images/logo.jpg" alt="" width="350px" height="128px"/>
+																<div class="title">
+																				<h1>Welcome to Australia<br/><small>from DMS Travel</small></h1>
+																</div>
+												</header>
+
+												<nav>
+																<ul class="nav nav-pills nav-justified">
+																				<li class="active"><a href="/home">Home</a></li>
+																				<li><a href="/doc" >Documentation</a></li>
+																				<li><a href="/about">About</a></li>
+																				<form role="form" class="navbar-form navbar-right search-form" >
+																								<div class="form-group">
+
+																												<input class="form-control" type="text" value="" placeholder="Search" />
+																												<input class="btn btn-primary" type="submit" />
+																								</div>
+																				</form>
+																</ul>
+												</nav>
+
+
+
+												<main>
+																<h2>Let us take you to the most wonderful vacationing spots Australia has to offer.</h1>
+																				<div class="destinations">
+																								<h2>Check out our <strong>hottest</strong> destinations!</h2>
+																								<div class="container">
+																												<div class="col-sm-4">
+																																																																																																																																								<div class="destination">
+																																																																																																																																									<img src="images/test.jpg" alt="image description" />
+																																																																																																																																									<div class="information">
+																																																																																																																																										<div class="likes">								17 likes						</div>
+																																																																																																																																										<div class="like" >									Like							</div>
+									</div>
+								</div>
+																																																																																																																														</div>
+																												<div class="col-sm-4">
+																																																																																																																																								<div class="destination">
+																																																																																																																																									<img src="images/test.jpg" alt="image description" />
+																																																																																																																																									<div class="information">
+																																																																																																																																										<div class="likes">								17 likes						</div>
+																																																																																																																																										<div class="like" >									Like							</div>
+									</div>
+								</div>
+																																																																																																																														</div>
+																												<div class="col-sm-4">
+																																																																																																																																								<div class="destination">
+																																																																																																																																									<img src="images/test.jpg" alt="image description" />
+																																																																																																																																									<div class="information">
+																																																																																																																																										<div class="likes">								17 likes						</div>
+																																																																																																																																										<div class="like" >									Like							</div>
+									</div>
+								</div>
+																																																																																																																																					</div>
+																												<div class="col-sm-4">
+																																																																																																																																								<div class="destination">
+																																																																																																																																									<img src="images/test.jpg" alt="image description" />
+																																																																																																																																									<div class="information">
+																																																																																																																																										<div class="likes">								17 likes						</div>
+																																																																																																																																										<div class="like" >									Like							</div>
+									</div>
+								</div>
+																																																																																																																														</div>
+																												<div class="col-sm-4">
+																																																																																																																																								<div class="destination">
+																																																																																																																																									<img src="images/test.jpg" alt="image description" />
+																																																																																																																																									<div class="information">
+																																																																																																																																										<div class="likes">								17 likes						</div>
+																																																																																																																																										<div class="like" >									Like							</div>
+									</div>
+								</div>
+																																																																																																																														</div>
+																												<div class="col-sm-4">
+																																																																																																																																								<div class="destination">
+																																																																																																																																									<img src="images/test.jpg" alt="image description" />
+																																																																																																																																									<div class="information">
+																																																																																																																																										<div class="likes">								17 likes						</div>
+																																																																																																																																										<div class="like" >									Like							</div>
+									</div>
+								</div>
+																																																																																																																														</div>
+																								</div>
+
+																								<div class="comments">
+																												<h2>See fantastic things people say about us!</h2>
+																												<div class="container">
+																																<div class="col-sm-12 comment">
+																																																																																																																																																																							<img src="images/face.jpg" alt="A face" />
+																																																																																																																																																																							<div class="text">
+																																																																																																																																																																															Absolutely fantastic experiences! I loved every single place I've been too! Woohoo!
+																							</div>
+																																																																																																																																															</div>
+																																<div class="col-sm-12 comment">
+																																																																																																																																																																							<img src="images/face.jpg" alt="A face" />
+																																																																																																																																																																							<div class="text">
+																																																																																																																																																																															Absolutely fantastic experiences! I loved every single place I've been too! Woohoo!
+																							</div>
+																																																																																																																																															</div>
+																																<div class="col-sm-12 comment">
+																																																																																																																																																																							<img src="images/face.jpg" alt="A face" />
+																																																																																																																																																																							<div class="text">
+																																																																																																																																																																															Absolutely fantastic experiences! I loved every single place I've been too! Woohoo!
+																							</div>
+																																																																																																																																															</div>
+																																<div class="col-sm-12 comment">
+																																																																																																																																																																							<img src="images/face.jpg" alt="A face" />
+																																																																																																																																																																							<div class="text">
+																																																																																																																																																																															Absolutely fantastic experiences! I loved every single place I've been too! Woohoo!
+																							</div>
+																																																																																																																																															</div>
+																												</div>
+																								</div>
+												</main>
+
+												<footer>
+																Yo all &copy;opyrights belong to the one and only lee fallat 2015
+												</footer>
+
+																				</div>
+
+																				<script>
+																				// This is called with the results from from FB.getLoginStatus().
+																					function statusChangeCallback(response) {
+																						if (response.status === 'connected') {
+																							testAPI();
+																							// Fetch albums and comments
+																						} else if (response.status === 'not_authorized') {
+																							document.getElementById('status').innerHTML = 'Please log ' +
+																								'into this app.';
+																						} else {
+																							document.getElementById('status').innerHTML = 'Please log ' +
+																								'into Facebook.';
+																						}
+																					}
+
+																				// This function is called when someone finishes with the Login
+																				// Button.  See the onlogin handler attached to it in the sample
+																				// code below.
+																					function checkLoginState() {
+																						FB.getLoginStatus(function(response) {
+																							statusChangeCallback(response);
+																						});
+																					}
+
+																				window.fbAsyncInit = function() {
+																					FB.init({
+																						appId      : '455942297942233',
+																						xfbml      : true,
+																						version    : 'v2.4'
+																					});
+
+																					FB.getLoginStatus(function(response) {
+																						statusChangeCallback(response);
+																					});
+
+																				};
+
+																				// Load the SDK asynchronously
+																				(function(d, s, id){
+																					var js, fjs = d.getElementsByTagName(s)[0];
+																					if (d.getElementById(id)) {return;}
+																					js = d.createElement(s); js.id = id;
+																					js.src = "//connect.facebook.net/en_US/sdk.js";
+																					fjs.parentNode.insertBefore(js, fjs);
+																				}(document, 'script', 'facebook-jssdk'));
+
+																				// Here we run a very simple test of the Graph API after login is
+																				// successful.  See statusChangeCallback() for when this call is made.
+																					function testAPI() {
+																						console.log('Welcome!  Fetching your information.... ');
+																						FB.api('/me', function(response) {
+																							console.log('Successful login for: ' + response.name);
+																							document.getElementById('status').innerHTML =
+																							'Thanks for logging in, ' + response.name + '!';
+																						});
+																					}
+																				</script>
+
+																				<!--
+																				Below we include the Login Button social plugin. This button uses
+																				the JavaScript SDK to present a graphical Login button that triggers
+																				the FB.login() function when clicked.
+																				-->
+
+																				<div class="fb-btn">
+																								<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+																								</fb:login-button>
+																				</div>
+
+				</body>
 </html>

@@ -60,7 +60,14 @@ $(document).ready(function() {
 	var i;
 	var html = "";
 	for(i = 0; i < photos.length; i += 1) {
-	    html += "<div class='column-1-3'><figure class='image' ><a href="+photos[i].url+"><img src='"+photos[i].url+"' alt='"+photos[i].desc+"' /></a><figcaption>"+photos[i].desc+"</figcaption></figure></div>";
+	    html += "<div class='column-1-3'>"
+		+"<figure class='image' >"
+		+"<a href="+photos[i].url+" data-lightbox='image-set' data-title='"+photos[i].desc+"'>"
+		+"<img src='"+photos[i].url+"' alt='"+photos[i].desc+"' />"
+		+"</a>"
+		+"<figcaption>"+photos[i].desc+"</figcaption>"
+		+"</figure>"
+		+"</div>";
 	}
 	return html;
     }
