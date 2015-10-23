@@ -1,0 +1,43 @@
+
+<div class="fb-btn">
+  <button  class="btn-login btn btn-primary btn-lg" ng-click="logout()">Logout</button>
+</div>
+
+<section class="description">
+    <h2>Let us take you to the most wonderful vacationing spots Australia has to offer.</h2>
+<br/>
+    <p>{{ description }}</p>
+</section>
+
+<div class="destinations">
+  <h2>Check out our <strong>hottest</strong> destinations!</h2>
+  <div class="container">
+    
+    <div class="col-sm-4" ng-repeat="destination in destinations">
+      <div class="destination">
+	<a ng-href="#/destination/{{ destination.id }}/photos"><img ng-src="{{ destination.picture.data.url }}" /></a>
+	<div class="information">
+          <div>{{ destination.name }}</div>
+	  <div class="likes">{{ destination.likes.data.length }} Likes</div>
+	</div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+  <div class="comments">
+    <h2>See fantastic things people say about us!</h2>
+    <div class="container">
+      
+      <div class="col-sm-12 comment" ng-repeat="post in posts">
+	<img src='{{ post.from.picture.data.url  }}' alt="A face" />
+	<div class="text">
+	 {{ post.message }}
+	</div>
+      </div>
+      
+    </div>
+  </div>
+

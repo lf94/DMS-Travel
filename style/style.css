@@ -1,18 +1,63 @@
 body {
+  overflow-x: hidden; }
+
+body {
   background-image: url("../images/beach-bg.jpg");
   font-size: 2em;
-  background-position: center left;
+  background-position: center top;
   background-attachment: fixed; }
 
 main, header, nav {
   width: 1170px;
   margin: auto; }
 
+@keyframes grow {
+  0% {
+    transform: scale(1);
+    background-color: initial;
+    padding: 0; }
+  50% {
+    transform: scale(1.1);
+    background-color: #3b5998;
+    padding: 0 0.5em; }
+  100% {
+    transform: scale(1);
+    background-color: initial;
+    padding: 0; } }
+@keyframes loading {
+  0% {
+    background-color: white;
+    width: 0%;
+    left: 0%; }
+  50% {
+    background-color: blue;
+    width: 50%;
+    left: 100%; }
+  100% {
+    background-color: white;
+    width: 100%;
+    left: -100%; } }
+#splash {
+  text-align: center; }
+  #splash #loading {
+    height: 2px;
+    position: absolute;
+    animation-name: loading;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; }
+  #splash .message {
+    color: white;
+    text-shadow: 0 0 0.2em black; }
+    #splash .message .login {
+      display: inline-block;
+      border-radius: 5px;
+      animation-name: grow;
+      animation-duration: 10s;
+      animation-iteration-count: infinite; }
+
 header {
   padding-bottom: 2em;
   padding-top: 2em; }
-  header .logo {
-    border-radius: 5px; }
   header .title {
     text-shadow: 0 0 2em black;
     display: inline-block;
@@ -24,15 +69,17 @@ header {
     header .title h1 {
       font-size: 3em; }
 
-.nav-pills > li + li {
+.nav {
   background-color: white; }
-
-.nav-pills li:nth-child(3) {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px; }
 
 .col-sm-4 {
   padding-top: 1em; }
+
+.description {
+  background-color: white;
+  box-shadow: 0 0 1em;
+  padding: 2em;
+  text-align: justify; }
 
 main > h2 {
   text-align: center;
@@ -40,39 +87,57 @@ main > h2 {
   font-size: 4em;
   text-shadow: 0 0 0.2em black; }
 
-.destinations, .comments {
-  text-align: center;
-  margin-top: 4em; }
-  .destinations > h2, .comments > h2 {
+.destinations, .comments, .photos {
+  text-align: center; }
+  .destinations > h2, .comments > h2, .photos > h2 {
     padding-bottom: 0.5em;
     color: white;
     font-size: 3em;
     text-shadow: 0 0 0.2em black; }
-    .destinations > h2 strong, .comments > h2 strong {
+    .destinations > h2 strong, .comments > h2 strong, .photos > h2 strong {
       color: #fda78d; }
-  .destinations .comment, .comments .comment {
+  .destinations .comment, .comments .comment, .photos .comment {
     background-color: white;
     box-shadow: 0 0 0.5em black;
-    border-radius: 0.2em;
     text-align: left;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     margin-top: 1em; }
-    .destinations .comment img, .comments .comment img {
+    .destinations .comment img, .comments .comment img, .photos .comment img {
       width: 6em; }
-    .destinations .comment .text, .comments .comment .text {
+    .destinations .comment .text, .comments .comment .text, .photos .comment .text {
       display: inline-block; }
-  .destinations .destination, .comments .destination {
+  .destinations .destination, .comments .destination, .photos .destination {
     background-color: white;
-    border-radius: 0.3em;
-    box-shadow: 0 0 1em;
-    padding: 0 !important; }
-    .destinations .destination img, .comments .destination img {
-      width: 100%;
-      border-top-right-radius: 0.3em;
-      border-top-left-radius: 0.3em; }
-    .destinations .destination .likes, .destinations .destination .like, .comments .destination .likes, .comments .destination .like {
+    box-shadow: 0 0 1em; }
+    .destinations .destination img, .comments .destination img, .photos .destination img {
+      width: 300px;
+      height: 200px; }
+    .destinations .destination .likes, .destinations .destination .like, .comments .destination .likes, .comments .destination .like, .photos .destination .likes, .photos .destination .like {
       display: inline-block; }
+    .destinations .destination .information, .comments .destination .information, .photos .destination .information {
+      position: absolute;
+      color: white;
+      bottom: 0;
+      right: 2.5em;
+      text-shadow: 0 0 0.1em black; }
+  .destinations .photo, .comments .photo, .photos .photo {
+    padding: 1em; }
+    .destinations .photo > div, .comments .photo > div, .photos .photo > div {
+      background-color: white;
+      box-shadow: 0 0 1em; }
+      .destinations .photo > div img, .comments .photo > div img, .photos .photo > div img {
+        margin-top: 1em;
+        width: 100%;
+        height: 320px; }
+      .destinations .photo > div .likes, .destinations .photo > div .like, .comments .photo > div .likes, .comments .photo > div .like, .photos .photo > div .likes, .photos .photo > div .like {
+        display: inline-block; }
+      .destinations .photo > div .information, .comments .photo > div .information, .photos .photo > div .information {
+        position: absolute;
+        color: white;
+        bottom: 3em;
+        right: 1.5em;
+        text-shadow: 0 0 0.1em black; }
 
 nav {
   padding-bottom: 2em; }
@@ -85,11 +150,11 @@ nav {
 
 footer {
   background-color: white;
-  box-shadow: 0 0 0.5em black;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+  padding: 10px 15px; }
 
 .fb-btn {
   position: fixed;

@@ -1,0 +1,29 @@
+
+<div class="fb-btn">
+  <button  class="btn-login btn btn-primary btn-lg" ng-click="logout()">Logout</button>
+</div>
+
+<div class="container photos">
+
+  <h2>Browse our beautiful collection of scenery.</h2>
+  
+     <div class="row">
+  <div class="col-sm-6 photo" ng-repeat="(index, photo) in photos">
+    <div>
+      <figure class='image' >
+	<a ng-href='{{ photo.largest.source }}' data-lightbox='image-set' data-title='{{ photo.name }}'>
+	  <img ng-src='{{ photo.thumbnail.source }}' width="50%" />
+	</a>
+        <figcaption>{{ photo.name === undefined ? '&nbsp;' : photo.name }}</figcaption>
+      </figure>
+      
+      <div class="information">
+	<div class="likes">{{ photo.likes === undefined ? '0' : photo.likes.data.length }} Likes
+          <button class='{{ photo.likeClass }}' ng-click="likeToggle(photo)">{{ photo.likeText }}</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+</div>

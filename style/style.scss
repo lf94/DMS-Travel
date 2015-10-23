@@ -3,9 +3,13 @@ $nav-background-color: red;
 $content-width: 1170px;
 
 body {
+    overflow-x: hidden;
+}
+
+body {
     background-image: url('../images/beach-bg.jpg');
     font-size: 2em;
-    background-position: center left;
+    background-position: center top;
     background-attachment: fixed;
 }
 
@@ -15,6 +19,55 @@ main, header, nav {
 }
 
 
+@keyframes grow {
+    0% { transform: scale(1.0); background-color: initial; padding: 0; }
+    50% { transform: scale(1.1); background-color: #3b5998; padding: 0 0.5em; }
+    100% {transform: scale(1.0); background-color: initial;  padding: 0;}
+}
+
+@keyframes loading {
+    0% {
+        background-color: white;
+        width: 0%;
+        left: 0%;
+    }
+    50% {
+        background-color: blue;
+        width: 50%;
+        left: 100%;
+    }
+    100% {
+        background-color: white;
+        width: 100%;
+        left: -100%;
+    }
+}
+
+#splash {
+    text-align: center;
+
+    #loading {
+        height: 2px;
+        position: absolute;
+        animation-name: loading;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    .message {
+        color: white;
+	text-shadow: 0 0 0.2em black;
+
+        .login {
+            display: inline-block;
+            border-radius: 5px;
+            animation-name: grow;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
 $title-color: white;
 
 header {
@@ -22,7 +75,6 @@ header {
     padding-top: 2em;
     
     .logo {
-	border-radius: 5px;
     }
     .title {
 	text-shadow: 0 0 2em black;
@@ -35,17 +87,19 @@ header {
     }
 }
 
-.nav-pills > li + li {
+.nav {
     background-color: white;
-}
-
-.nav-pills li:nth-child(3) {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
 }
 
 .col-sm-4 {
     padding-top: 1em;
+}
+
+.description {
+    background-color: white;
+     box-shadow: 0 0 1em;
+     padding: 2em;
+     text-align: justify;
 }
 
 main > h2 {
@@ -55,9 +109,8 @@ main > h2 {
     text-shadow: 0 0 0.2em black;
 }
 
-.destinations, .comments {
+.destinations, .comments, .photos {
     text-align: center;
-    margin-top: 4em;
 
     & > h2 {
 	padding-bottom: 0.5em;
@@ -72,7 +125,6 @@ main > h2 {
     .comment {
 	background-color: white;
 	box-shadow: 0 0 0.5em black;
-	border-radius: 0.2em;
 	text-align: left;
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
@@ -89,20 +141,55 @@ main > h2 {
 
     .destination {
 	  background-color: white;
-	  border-radius: 0.3em;
 	  box-shadow: 0 0 1em;
-	  padding: 0 !important;
-	  
+                     
 	  img {
-	      width: 100%;
-	      border-top-right-radius: 0.3em;
-	      border-top-left-radius: 0.3em;
+	      width: 300px;
+              height: 200px;
 	  }
 
 	  .likes, .like {
 	      display: inline-block;
 	  }
+
+          .information {
+              position: absolute;
+              color: white;
+              bottom: 0;
+              right: 2.5em;
+              text-shadow: 0 0 0.1em black;
+          }
     }
+
+    .photo {
+
+        padding: 1em;
+
+        & > div {
+            background-color: white;
+	    box-shadow: 0 0 1em;
+
+            img {
+                margin-top: 1em;
+                width: 100%;
+                height: 320px;
+	    }
+
+	    .likes, .like {
+	        display: inline-block;
+	    }
+
+            .information {
+                position: absolute;
+                color: white;
+                bottom: 3em;
+                right: 1.5em;
+                text-shadow: 0 0 0.1em black;
+            }
+        }
+        
+    }
+
 }
 
 nav {
@@ -122,11 +209,11 @@ nav {
 
 footer {
     background-color: white;
-    box-shadow: 0 0 0.5em black;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     margin-top: 2em;
     text-align: center;
+    padding: 10px 15px;
 }
 
 .fb-btn {
