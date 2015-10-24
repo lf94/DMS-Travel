@@ -1,5 +1,6 @@
 var DMSTravelApp = angular.module("DMSTravelApp", [
     "ngRoute",
+    "ngAnimate",
     "FacebookServices",
     "MainControllers"
 ]);

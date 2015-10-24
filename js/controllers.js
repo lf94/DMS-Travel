@@ -30,8 +30,9 @@ MainControllers.controller(
             function authenticationSuccess() {
                 /* Navigate to /home */
                 // Force Angular to cause View updates.
-                $location.path("/home");
-                $scope.$apply();
+                $scope.$apply(function(){
+                    $location.path("/home");
+                });
             }
             
             console.log("SplashController");

@@ -160,3 +160,10 @@ footer {
   position: fixed;
   right: 1em;
   top: 1em; }
+
+.ng-enter {
+  transition: 1s;
+  opacity: 0; }
+
+.ng-enter-active {
+  opacity: 1; }
